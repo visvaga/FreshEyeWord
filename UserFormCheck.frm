@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} UserFormCheck 
-   Caption         =   "Свежий взгляд"
+   Caption         =   "Г‘ГўГҐГ¦ГЁГ© ГўГ§ГЈГ«ГїГ¤"
    ClientHeight    =   2905
    ClientLeft      =   91
    ClientTop       =   406
@@ -53,13 +53,13 @@ Private Sub cmdClear_Click()
         wordRange.HighlightColorIndex = wdNoHighlight
         wordRange.Shading.BackgroundPatternColor = wdColorAutomatic
     Next wordRange
-    MsgBox "Очищаем текст"
+    MsgBox "ГЋГ·ГЁГ№Г ГҐГ¬ ГІГҐГЄГ±ГІ"
 End Sub
 
 Private Sub UserForm_Initialize()
     ' Set initial values for TextBoxes and SpinButtons
-    Me.txtSensitivity.text = "500"
-    Me.spinSensitivity.value = 500
+    Me.txtSensitivity.text = "290"
+    Me.spinSensitivity.value = 290
     Me.txtContextSize.text = "30"
     Me.spinContextSize.value = 30
 '    Me.chkExcludeProperNames.value = True ' Default to True
