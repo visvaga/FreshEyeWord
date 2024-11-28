@@ -2,7 +2,7 @@ Attribute VB_Name = "Module1"
 
 Option Explicit
 
-' version 10.0 of VBA macro FreshEye - search of similar words within selected text
+' version 11.0 of VBA macro FreshEye - search of similar words within selected text
 
 ' Variables for linguistic tables
 Dim sim_ch_stride As Integer
@@ -23,7 +23,7 @@ Dim highlightColors() As WdColorIndex
 Sub AnalyzeSelectedText()
     ' Check if there is a text selection
     If Selection.Type = wdSelectionIP Then
-        MsgBox "Текст не выделен."
+        MsgBox "Г’ГҐГЄГ±ГІ Г­ГҐ ГўГ»Г¤ГҐГ«ГҐГ­."
         Exit Sub
     End If
 
@@ -84,7 +84,7 @@ Sub InitializeData()
     Dim i As Integer, j As Integer
     
     ' Populate similarity map values for sim_ch_data
-' а
+' Г 
 sim_ch_data(1, 1) = 9
 sim_ch_data(1, 2) = 0
 sim_ch_data(1, 3) = 0
@@ -120,7 +120,7 @@ sim_ch_data(1, 32) = 2
 sim_ch_data(1, 33) = 0
 sim_ch_data(1, 34) = 1
 
-' б
+' ГЎ
 sim_ch_data(2, 1) = 0
 sim_ch_data(2, 2) = 9
 sim_ch_data(2, 3) = 1
@@ -156,7 +156,7 @@ sim_ch_data(2, 32) = 0
 sim_ch_data(2, 33) = 0
 sim_ch_data(2, 34) = 0
 
-' в
+' Гў
 sim_ch_data(3, 1) = 0
 sim_ch_data(3, 2) = 1
 sim_ch_data(3, 3) = 9
@@ -192,7 +192,7 @@ sim_ch_data(3, 32) = 0
 sim_ch_data(3, 33) = 0
 sim_ch_data(3, 34) = 0
 
-' г
+' ГЈ
 sim_ch_data(4, 1) = 0
 sim_ch_data(4, 2) = 0
 sim_ch_data(4, 3) = 1
@@ -229,7 +229,7 @@ sim_ch_data(4, 33) = 0
 sim_ch_data(4, 34) = 0
 
 
-' д
+' Г¤
 sim_ch_data(5, 1) = 0
 sim_ch_data(5, 2) = 0
 sim_ch_data(5, 3) = 0
@@ -266,7 +266,7 @@ sim_ch_data(5, 33) = 0
 sim_ch_data(5, 34) = 0
 
 
-' е
+' ГҐ
 sim_ch_data(6, 1) = 1
 sim_ch_data(6, 2) = 0
 sim_ch_data(6, 3) = 0
@@ -303,7 +303,7 @@ sim_ch_data(6, 33) = 0
 sim_ch_data(6, 34) = 9
 
 
-' ж
+' Г¦
 sim_ch_data(7, 1) = 0
 sim_ch_data(7, 2) = 0
 sim_ch_data(7, 3) = 0
@@ -340,7 +340,7 @@ sim_ch_data(7, 33) = 0
 sim_ch_data(7, 34) = 0
 
 
-' з
+' Г§
 sim_ch_data(8, 1) = 0
 sim_ch_data(8, 2) = 0
 sim_ch_data(8, 3) = 0
@@ -377,7 +377,7 @@ sim_ch_data(8, 33) = 0
 sim_ch_data(8, 34) = 0
 
 
-' и
+' ГЁ
 sim_ch_data(9, 1) = 1
 sim_ch_data(9, 2) = 0
 sim_ch_data(9, 3) = 0
@@ -414,7 +414,7 @@ sim_ch_data(9, 33) = 0
 sim_ch_data(9, 34) = 2
 
 
-' й
+' Г©
 sim_ch_data(10, 1) = 0
 sim_ch_data(10, 2) = 0
 sim_ch_data(10, 3) = 0
@@ -451,7 +451,7 @@ sim_ch_data(10, 33) = 0
 sim_ch_data(10, 34) = 0
 
 
-' к
+' ГЄ
 sim_ch_data(11, 1) = 0
 sim_ch_data(11, 2) = 0
 sim_ch_data(11, 3) = 0
@@ -488,7 +488,7 @@ sim_ch_data(11, 33) = 0
 sim_ch_data(11, 34) = 0
 
 
-' л
+' Г«
 sim_ch_data(12, 1) = 0
 sim_ch_data(12, 2) = 0
 sim_ch_data(12, 3) = 1
@@ -525,7 +525,7 @@ sim_ch_data(12, 33) = 0
 sim_ch_data(12, 34) = 0
 
 
-' м
+' Г¬
 sim_ch_data(13, 1) = 0
 sim_ch_data(13, 2) = 0
 sim_ch_data(13, 3) = 1
@@ -562,7 +562,7 @@ sim_ch_data(13, 33) = 0
 sim_ch_data(13, 34) = 0
 
 
-' н
+' Г­
 sim_ch_data(14, 1) = 0
 sim_ch_data(14, 2) = 0
 sim_ch_data(14, 3) = 1
@@ -599,7 +599,7 @@ sim_ch_data(14, 33) = 0
 sim_ch_data(14, 34) = 0
 
 
-' о
+' Г®
 sim_ch_data(15, 1) = 2
 sim_ch_data(15, 2) = 0
 sim_ch_data(15, 3) = 0
@@ -636,7 +636,7 @@ sim_ch_data(15, 33) = 0
 sim_ch_data(15, 34) = 1
 
 
-' п
+' ГЇ
 sim_ch_data(16, 1) = 0
 sim_ch_data(16, 2) = 3
 sim_ch_data(16, 3) = 1
@@ -673,7 +673,7 @@ sim_ch_data(16, 33) = 0
 sim_ch_data(16, 34) = 0
 
 
-' р
+' Г°
 sim_ch_data(17, 1) = 0
 sim_ch_data(17, 2) = 0
 sim_ch_data(17, 3) = 0
@@ -710,7 +710,7 @@ sim_ch_data(17, 33) = 0
 sim_ch_data(17, 34) = 0
 
 
-' с
+' Г±
 sim_ch_data(18, 1) = 0
 sim_ch_data(18, 2) = 0
 sim_ch_data(18, 3) = 0
@@ -747,7 +747,7 @@ sim_ch_data(18, 33) = 0
 sim_ch_data(18, 34) = 0
 
 
-' т
+' ГІ
 sim_ch_data(19, 1) = 0
 sim_ch_data(19, 2) = 0
 sim_ch_data(19, 3) = 0
@@ -784,7 +784,7 @@ sim_ch_data(19, 33) = 0
 sim_ch_data(19, 34) = 0
 
 
-' у
+' Гі
 sim_ch_data(20, 1) = 1
 sim_ch_data(20, 2) = 0
 sim_ch_data(20, 3) = 1
@@ -821,7 +821,7 @@ sim_ch_data(20, 33) = 0
 sim_ch_data(20, 34) = 1
 
 
-' ф
+' Гґ
 sim_ch_data(21, 1) = 0
 sim_ch_data(21, 2) = 1
 sim_ch_data(21, 3) = 3
@@ -858,7 +858,7 @@ sim_ch_data(21, 33) = 0
 sim_ch_data(21, 34) = 0
 
 
-' х
+' Гµ
 sim_ch_data(22, 1) = 0
 sim_ch_data(22, 2) = 0
 sim_ch_data(22, 3) = 0
@@ -895,7 +895,7 @@ sim_ch_data(22, 33) = 0
 sim_ch_data(22, 34) = 0
 
 
-' ц
+' Г¶
 sim_ch_data(23, 1) = 0
 sim_ch_data(23, 2) = 0
 sim_ch_data(23, 3) = 0
@@ -932,7 +932,7 @@ sim_ch_data(23, 33) = 0
 sim_ch_data(23, 34) = 0
 
 
-' ч
+' Г·
 sim_ch_data(24, 1) = 0
 sim_ch_data(24, 2) = 0
 sim_ch_data(24, 3) = 0
@@ -969,7 +969,7 @@ sim_ch_data(24, 33) = 0
 sim_ch_data(24, 34) = 0
 
 
-' ш
+' Гё
 sim_ch_data(25, 1) = 0
 sim_ch_data(25, 2) = 0
 sim_ch_data(25, 3) = 0
@@ -1006,7 +1006,7 @@ sim_ch_data(25, 33) = 0
 sim_ch_data(25, 34) = 0
 
 
-' щ
+' Г№
 sim_ch_data(26, 1) = 0
 sim_ch_data(26, 2) = 0
 sim_ch_data(26, 3) = 0
@@ -1043,7 +1043,7 @@ sim_ch_data(26, 33) = 0
 sim_ch_data(26, 34) = 0
 
 
-' ъ
+' Гє
 sim_ch_data(27, 1) = 0
 sim_ch_data(27, 2) = 0
 sim_ch_data(27, 3) = 0
@@ -1080,7 +1080,7 @@ sim_ch_data(27, 33) = 0
 sim_ch_data(27, 34) = 0
 
 
-' ы
+' Г»
 sim_ch_data(28, 1) = 1
 sim_ch_data(28, 2) = 0
 sim_ch_data(28, 3) = 0
@@ -1117,7 +1117,7 @@ sim_ch_data(28, 33) = 0
 sim_ch_data(28, 34) = 1
 
 
-' ь
+' Гј
 sim_ch_data(29, 1) = 0
 sim_ch_data(29, 2) = 0
 sim_ch_data(29, 3) = 0
@@ -1154,7 +1154,7 @@ sim_ch_data(29, 33) = 0
 sim_ch_data(29, 34) = 0
 
 
-' э
+' ГЅ
 sim_ch_data(30, 1) = 1
 sim_ch_data(30, 2) = 0
 sim_ch_data(30, 3) = 0
@@ -1191,7 +1191,7 @@ sim_ch_data(30, 33) = 0
 sim_ch_data(30, 34) = 3
 
 
-' ю
+' Гѕ
 sim_ch_data(31, 1) = 1
 sim_ch_data(31, 2) = 0
 sim_ch_data(31, 3) = 0
@@ -1228,7 +1228,7 @@ sim_ch_data(31, 33) = 0
 sim_ch_data(31, 34) = 1
 
 
-' я
+' Гї
 sim_ch_data(32, 1) = 2
 sim_ch_data(32, 2) = 0
 sim_ch_data(32, 3) = 0
@@ -1302,7 +1302,7 @@ sim_ch_data(33, 33) = 0
 sim_ch_data(33, 34) = 0
 
 
-' ё
+' Вё
 sim_ch_data(34, 1) = 1
 sim_ch_data(34, 2) = 0
 sim_ch_data(34, 3) = 0
@@ -1347,40 +1347,40 @@ sim_ch_data(34, 34) = 9
 
     ' Define and populate information letters array (inf_letters) as Integer
 Dim inf_letters_data(1 To 34, 1 To 2) As Integer
-inf_letters_data(1, 1) = 802: inf_letters_data(1, 2) = 959 ' а
-inf_letters_data(2, 1) = 1232: inf_letters_data(2, 2) = 1129 ' б
-inf_letters_data(3, 1) = 944: inf_letters_data(3, 2) = 859 ' в
-inf_letters_data(4, 1) = 1253: inf_letters_data(4, 2) = 1193 ' г
-inf_letters_data(5, 1) = 1064: inf_letters_data(5, 2) = 951 ' д
-inf_letters_data(6, 1) = 759: inf_letters_data(6, 2) = 1232 ' е
-inf_letters_data(7, 1) = 1432: inf_letters_data(7, 2) = 1432 ' ж
-inf_letters_data(8, 1) = 1193: inf_letters_data(8, 2) = 993 ' з
-inf_letters_data(9, 1) = 802: inf_letters_data(9, 2) = 767 ' и
-inf_letters_data(10, 1) = 1329: inf_letters_data(10, 2) = 1993 ' й
-inf_letters_data(11, 1) = 1032: inf_letters_data(11, 2) = 929 ' к
-inf_letters_data(12, 1) = 967: inf_letters_data(12, 2) = 1276 ' л
-inf_letters_data(13, 1) = 1053: inf_letters_data(13, 2) = 944 ' м
-inf_letters_data(14, 1) = 848: inf_letters_data(14, 2) = 711 ' н
-inf_letters_data(15, 1) = 695: inf_letters_data(15, 2) = 853 ' о
-inf_letters_data(16, 1) = 1088: inf_letters_data(16, 2) = 454 ' п
-inf_letters_data(17, 1) = 929: inf_letters_data(17, 2) = 1115 ' р
-inf_letters_data(18, 1) = 895: inf_letters_data(18, 2) = 793 ' с
-inf_letters_data(19, 1) = 848: inf_letters_data(19, 2) = 1002 ' т
-inf_letters_data(20, 1) = 1115: inf_letters_data(20, 2) = 1129 ' у
-inf_letters_data(21, 1) = 1793: inf_letters_data(21, 2) = 1022 ' ф
-inf_letters_data(22, 1) = 1259: inf_letters_data(22, 2) = 1329 ' х ' [0] manually decreased! was 1359
-inf_letters_data(23, 1) = 1593: inf_letters_data(23, 2) = 1393 ' ц
-inf_letters_data(24, 1) = 1276: inf_letters_data(24, 2) = 1212 ' ч
-inf_letters_data(25, 1) = 1476: inf_letters_data(25, 2) = 1012 ' ш
-inf_letters_data(26, 1) = 1676: inf_letters_data(26, 2) = 1676 ' щ
-inf_letters_data(27, 1) = 1993: inf_letters_data(27, 2) = 3986 ' ъ
-inf_letters_data(28, 1) = 1193: inf_letters_data(28, 2) = 3986 ' ы
-inf_letters_data(29, 1) = 1253: inf_letters_data(29, 2) = 3986 ' ь
-inf_letters_data(30, 1) = 1676: inf_letters_data(30, 2) = 1232 ' э
-inf_letters_data(31, 1) = 1476: inf_letters_data(31, 2) = 1793 ' ю
-inf_letters_data(32, 1) = 1159: inf_letters_data(32, 2) = 967 ' я
+inf_letters_data(1, 1) = 802: inf_letters_data(1, 2) = 959 ' Г 
+inf_letters_data(2, 1) = 1232: inf_letters_data(2, 2) = 1129 ' ГЎ
+inf_letters_data(3, 1) = 944: inf_letters_data(3, 2) = 859 ' Гў
+inf_letters_data(4, 1) = 1253: inf_letters_data(4, 2) = 1193 ' ГЈ
+inf_letters_data(5, 1) = 1064: inf_letters_data(5, 2) = 951 ' Г¤
+inf_letters_data(6, 1) = 759: inf_letters_data(6, 2) = 1232 ' ГҐ
+inf_letters_data(7, 1) = 1432: inf_letters_data(7, 2) = 1432 ' Г¦
+inf_letters_data(8, 1) = 1193: inf_letters_data(8, 2) = 993 ' Г§
+inf_letters_data(9, 1) = 802: inf_letters_data(9, 2) = 767 ' ГЁ
+inf_letters_data(10, 1) = 1329: inf_letters_data(10, 2) = 1993 ' Г©
+inf_letters_data(11, 1) = 1032: inf_letters_data(11, 2) = 929 ' ГЄ
+inf_letters_data(12, 1) = 967: inf_letters_data(12, 2) = 1276 ' Г«
+inf_letters_data(13, 1) = 1053: inf_letters_data(13, 2) = 944 ' Г¬
+inf_letters_data(14, 1) = 848: inf_letters_data(14, 2) = 711 ' Г­
+inf_letters_data(15, 1) = 695: inf_letters_data(15, 2) = 853 ' Г®
+inf_letters_data(16, 1) = 1088: inf_letters_data(16, 2) = 454 ' ГЇ
+inf_letters_data(17, 1) = 929: inf_letters_data(17, 2) = 1115 ' Г°
+inf_letters_data(18, 1) = 895: inf_letters_data(18, 2) = 793 ' Г±
+inf_letters_data(19, 1) = 848: inf_letters_data(19, 2) = 1002 ' ГІ
+inf_letters_data(20, 1) = 1115: inf_letters_data(20, 2) = 1129 ' Гі
+inf_letters_data(21, 1) = 1793: inf_letters_data(21, 2) = 1022 ' Гґ
+inf_letters_data(22, 1) = 1259: inf_letters_data(22, 2) = 1329 ' Гµ ' [0] manually decreased! was 1359
+inf_letters_data(23, 1) = 1593: inf_letters_data(23, 2) = 1393 ' Г¶
+inf_letters_data(24, 1) = 1276: inf_letters_data(24, 2) = 1212 ' Г·
+inf_letters_data(25, 1) = 1476: inf_letters_data(25, 2) = 1012 ' Гё
+inf_letters_data(26, 1) = 1676: inf_letters_data(26, 2) = 1676 ' Г№
+inf_letters_data(27, 1) = 1993: inf_letters_data(27, 2) = 3986 ' Гє
+inf_letters_data(28, 1) = 1193: inf_letters_data(28, 2) = 3986 ' Г»
+inf_letters_data(29, 1) = 1253: inf_letters_data(29, 2) = 3986 ' Гј
+inf_letters_data(30, 1) = 1676: inf_letters_data(30, 2) = 1232 ' ГЅ
+inf_letters_data(31, 1) = 1476: inf_letters_data(31, 2) = 1793 ' Гѕ
+inf_letters_data(32, 1) = 1159: inf_letters_data(32, 2) = 967 ' Гї
 inf_letters_data(33, 1) = 0: inf_letters_data(33, 2) = 0 '
-inf_letters_data(34, 1) = 1300: inf_letters_data(34, 2) = 900 ' ё  ' set manually - dk
+inf_letters_data(34, 1) = 1300: inf_letters_data(34, 2) = 900 ' Вё  ' set manually - dk
 
 
     ' Populate inf_letters with data
@@ -1393,59 +1393,59 @@ inf_letters_data(34, 1) = 1300: inf_letters_data(34, 2) = 900 ' ё  ' set manuall
     Set exceptions_voc = CreateObject("Scripting.Dictionary")
     Set exceptions_voc_first = CreateObject("Scripting.Dictionary")
     With exceptions_voc
-.add "белым бело", True
-.add "больше меньше", True
-.add "больше более", True
-.add "более больше", True
-.add "бы вы", True
-.add "вины виноватый", True
-.add "волей неволей", True
-.add "время времени", True
-.add "всего навсего", True
-.add "вы бы", True
-.add "даже уже", True
-.add "друг друга", True
-.add "друг друге", True
-.add "друг другом", True
-.add "друг другу", True
-.add "дурак дураком", True
-.add "если если", True
-.add "звонка звонка", True
-.add "или или", True
-.add "как так", True
-.add "конце концов", True
-.add "корки корки", True
-.add "кто что", True
-.add "либо либо", True
-.add "мало помалу", True
-.add "меньше больше", True
-.add "начать сначала", True
-.add "не на", True
-.add "не не", True
-.add "не ни", True
-.add "него нет", True
-.add "ни на", True
-.add "ни не", True
-.add "ни ни", True
-.add "но на", True
-.add "но не", True
-.add "но ни", True
-.add "новые новые", True
-.add "объять необъятное", True
-.add "одному тому", True
-.add "полным полно", True
-.add "постольку поскольку", True
-.add "так как", True
-.add "тем чем", True
-.add "то то", True
-.add "тогда когда", True
-.add "ха ха", True
-.add "чем тем", True
-.add "что то", True
-.add "чуть чуть", True
-.add "шаг шагом", True
-.add "этой что", True
-.add "этот что", True
+.add "ГЎГҐГ«Г»Г¬ ГЎГҐГ«Г®", True
+.add "ГЎГ®Г«ГјГёГҐ Г¬ГҐГ­ГјГёГҐ", True
+.add "ГЎГ®Г«ГјГёГҐ ГЎГ®Г«ГҐГҐ", True
+.add "ГЎГ®Г«ГҐГҐ ГЎГ®Г«ГјГёГҐ", True
+.add "ГЎГ» ГўГ»", True
+.add "ГўГЁГ­Г» ГўГЁГ­Г®ГўГ ГІГ»Г©", True
+.add "ГўГ®Г«ГҐГ© Г­ГҐГўГ®Г«ГҐГ©", True
+.add "ГўГ°ГҐГ¬Гї ГўГ°ГҐГ¬ГҐГ­ГЁ", True
+.add "ГўГ±ГҐГЈГ® Г­Г ГўГ±ГҐГЈГ®", True
+.add "ГўГ» ГЎГ»", True
+.add "Г¤Г Г¦ГҐ ГіГ¦ГҐ", True
+.add "Г¤Г°ГіГЈ Г¤Г°ГіГЈГ ", True
+.add "Г¤Г°ГіГЈ Г¤Г°ГіГЈГҐ", True
+.add "Г¤Г°ГіГЈ Г¤Г°ГіГЈГ®Г¬", True
+.add "Г¤Г°ГіГЈ Г¤Г°ГіГЈГі", True
+.add "Г¤ГіГ°Г ГЄ Г¤ГіГ°Г ГЄГ®Г¬", True
+.add "ГҐГ±Г«ГЁ ГҐГ±Г«ГЁ", True
+.add "Г§ГўГ®Г­ГЄГ  Г§ГўГ®Г­ГЄГ ", True
+.add "ГЁГ«ГЁ ГЁГ«ГЁ", True
+.add "ГЄГ ГЄ ГІГ ГЄ", True
+.add "ГЄГ®Г­Г¶ГҐ ГЄГ®Г­Г¶Г®Гў", True
+.add "ГЄГ®Г°ГЄГЁ ГЄГ®Г°ГЄГЁ", True
+.add "ГЄГІГ® Г·ГІГ®", True
+.add "Г«ГЁГЎГ® Г«ГЁГЎГ®", True
+.add "Г¬Г Г«Г® ГЇГ®Г¬Г Г«Гі", True
+.add "Г¬ГҐГ­ГјГёГҐ ГЎГ®Г«ГјГёГҐ", True
+.add "Г­Г Г·Г ГІГј Г±Г­Г Г·Г Г«Г ", True
+.add "Г­ГҐ Г­Г ", True
+.add "Г­ГҐ Г­ГҐ", True
+.add "Г­ГҐ Г­ГЁ", True
+.add "Г­ГҐГЈГ® Г­ГҐГІ", True
+.add "Г­ГЁ Г­Г ", True
+.add "Г­ГЁ Г­ГҐ", True
+.add "Г­ГЁ Г­ГЁ", True
+.add "Г­Г® Г­Г ", True
+.add "Г­Г® Г­ГҐ", True
+.add "Г­Г® Г­ГЁ", True
+.add "Г­Г®ГўГ»ГҐ Г­Г®ГўГ»ГҐ", True
+.add "Г®ГЎГєГїГІГј Г­ГҐГ®ГЎГєГїГІГ­Г®ГҐ", True
+.add "Г®Г¤Г­Г®Г¬Гі ГІГ®Г¬Гі", True
+.add "ГЇГ®Г«Г­Г»Г¬ ГЇГ®Г«Г­Г®", True
+.add "ГЇГ®Г±ГІГ®Г«ГјГЄГі ГЇГ®Г±ГЄГ®Г«ГјГЄГі", True
+.add "ГІГ ГЄ ГЄГ ГЄ", True
+.add "ГІГҐГ¬ Г·ГҐГ¬", True
+.add "ГІГ® ГІГ®", True
+.add "ГІГ®ГЈГ¤Г  ГЄГ®ГЈГ¤Г ", True
+.add "ГµГ  ГµГ ", True
+.add "Г·ГҐГ¬ ГІГҐГ¬", True
+.add "Г·ГІГ® ГІГ®", True
+.add "Г·ГіГІГј Г·ГіГІГј", True
+.add "ГёГ ГЈ ГёГ ГЈГ®Г¬", True
+.add "ГЅГІГ®Г© Г·ГІГ®", True
+.add "ГЅГІГ®ГІ Г·ГІГ®", True
         
     End With
 
@@ -1703,11 +1703,11 @@ NextWord:
     Dim average_badness As Double
     average_badness = IIf(words_checked > 0, total_badness / words_checked, 0)
     
-    Fresheye = "Анализ завершён:" & vbCrLf & _
-               "Комбинаций слов проверено: " & words_checked & vbCrLf & _
-               "Средняя плохость: " & Round(average_badness, 2) & vbCrLf & _
+    Fresheye = "ГЂГ­Г Г«ГЁГ§ Г§Г ГўГҐГ°ГёВёГ­:" & vbCrLf & _
+               "ГЉГ®Г¬ГЎГЁГ­Г Г¶ГЁГ© Г±Г«Г®Гў ГЇГ°Г®ГўГҐГ°ГҐГ­Г®: " & words_checked & vbCrLf & _
+               "Г‘Г°ГҐГ¤Г­ГїГї ГЇГ«Г®ГµГ®Г±ГІГј: " & Round(average_badness, 2) & vbCrLf & _
                 vbCrLf & _
-               "Теперь раскрасим слова"
+               "Г’ГҐГЇГҐГ°Гј Г°Г Г±ГЄГ°Г Г±ГЁГ¬ Г±Г«Г®ГўГ "
 
     Dim badWordsSummary As String
     Dim detail As Variant
@@ -1733,7 +1733,7 @@ Sub HighlightBadWords()
 
     ' Define the array of syntax symbols to exclude
     Dim syntaxSymbols As Variant
-    syntaxSymbols = Array(",", ".", "/", "?", "!", ")", "(", "[", "]", "<", ">", """", "\", "«", "»", "“", "”", "„", "—", ";", ":")
+    syntaxSymbols = Array(",", ".", "/", "?", "!", ")", "(", "[", "]", "<", ">", """", "\", "В«", "В»", "вЂњ", "вЂќ", "вЂћ", "вЂ”", ";", ":")
 
     Set searchRange = Selection.range.Duplicate
 
@@ -1777,8 +1777,13 @@ Sub HighlightBadWords()
             End If
         Loop
 
+        ' Handle the special case where the bad word is the first word in the text
+        If wordPosition = 1 Then
+            characterPosition = 0 ' Ensure characterPosition points to the start of the selection
+        End If
+
         ' At this point, characterPosition should be the start of the desired word
-        If characterPosition > 0 Then
+        If characterPosition >= 0 Then
             Set wordRange = searchRange.Duplicate
             wordRange.SetRange start:=searchRange.start + characterPosition, _
                                End:=searchRange.start + characterPosition + Len(badWord)
@@ -1800,5 +1805,4 @@ Sub HighlightBadWords()
         End If
     Next wordInfo
 End Sub
-
 
