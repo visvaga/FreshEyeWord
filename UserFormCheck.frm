@@ -58,8 +58,8 @@ End Sub
 
 Private Sub UserForm_Initialize()
     ' Set initial values for TextBoxes and SpinButtons
-    Me.txtSensitivity.text = "290"
-    Me.spinSensitivity.value = 290
+    Me.txtSensitivity.text = "370"
+    Me.spinSensitivity.value = 370
     Me.txtContextSize.text = "30"
     Me.spinContextSize.value = 30
 '    Me.chkExcludeProperNames.value = True ' Default to True
